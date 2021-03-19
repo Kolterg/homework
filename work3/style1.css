@@ -1,0 +1,31 @@
+.box1 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #9f9fcb;
+    height: 300px;
+    margin: 10px;
+}
+
+.father {
+    display: flex;
+}
+
+.box2 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #be5656;
+    height: 589px;
+    width: 1500px;
+    margin: 10px;
+}
+
+.box3 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: violet;
+    width: 410px;
+    margin: 10px;
+}
