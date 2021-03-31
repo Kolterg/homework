@@ -1,4 +1,6 @@
-// //1-2
+// // 1-2
+// // Присвоить каждому из следующих значений свою переменную: 'hello','owu','com', 'ua', 1, 10, -999, 123, 3.14, 2.7, 16, true, false
+// // Вывести каждую при помощи console.log , alert, document.write
 //
 // let str1 = 'hello';
 // let str2 = 'owu';
@@ -56,6 +58,8 @@
 // document.write('<h2>' + bool1 + '</h2>');
 // document.write('<h2>' + bool2 + '</h2>');
 //
+// // Переопределить каждую переменную из задания 1 дав им произвольные значения Вывести каждую при помощи console.log , alert, document.write
+//
 // str1 = 'world';
 // str2 = 'okten';
 // str3 = 'net';
@@ -112,7 +116,8 @@
 // document.write('<h2>' + bool1 + '</h2>');
 // document.write('<h2>' + bool2 + '</h2>');
 
-// //3
+// // 3
+// // Создать 3 числовых и 3 стринговых константы. Вывести каждую при помощи console.log , alert, document.write
 //
 // const num1 = 12;
 // const num2 = 17;
@@ -142,7 +147,9 @@
 // document.write('<h3>' + str2 + '</h3>');
 // document.write('<h3>' + str3 + '</h3>');
 
-// //4-6
+// // 4-6
+// // При помощи 3х разных prompt() получить 3 слова которые являются вашими ФИО.
+// // Для фамилии имени и отчества создать разные переменные. Вывести каждую при помощи console.log , alert, document.write
 //
 // let surname = prompt('set your surname')
 // let name = prompt('set your name')
@@ -161,13 +168,16 @@
 // document.write('<h3>' + name + '</h3>');
 // document.write('<h3>' + midleName + '</h3>');
 //
+// // Взять переменные из задания 4 и сконкатенировать их в одной переменной person.
+//
 // let person = surname + space + name + space + midleName;
 //
 // console.log(person);
 // alert(person);
 // document.write('<h3>' + person + '</h3>');
 
-// //7
+// // 7
+// // При помощи prompt() получить 3 числа. Привести их к числовому типу при помощи +. вывести их в консоль.
 //
 // let num1 = prompt('set first number');
 // let num2 = prompt('set second number');
@@ -181,7 +191,9 @@
 // console.log(num2);
 // console.log(num3);
 
-// //8
+// // 8
+// // При помощи prompt() получить 4 числа. Привести их к числовому типу при помощи parseInt.
+// // Сложить их между собой записав результат в переменную result и вывести в консоль браузера
 //
 // let num1 = prompt('set first number');
 // let num2 = prompt('set second number');
@@ -196,7 +208,9 @@
 // let result = num1 + num2 + num3 + num4;
 // console.log(result);
 
-// //9
+// // 9
+// // При помощи prompt()  получить 3 числа с плавающей точекой. при помощи parseFloat привести их к соответсвующему типу.
+// // Сложить их между собой записав результат в переменную result и вывести в консоль браузера
 //
 // let num1 = prompt('set first number');
 // let num2 = prompt('set second number');
@@ -210,7 +224,9 @@
 //
 // console.log(result);
 
-// //10
+// // 10
+// // При помощи prompt()  получить 3 числа с плавающей точекой. Округлить их при помощи Math.round
+// // Сложить их между собой записав результат в переменную  и вывести в консоль браузера
 //
 // let num1 = prompt('set first number');
 // let num2 = prompt('set second number');
@@ -224,7 +240,10 @@
 //
 // console.log(result);
 
-// //11
+// // 11
+// // Ппри помощи prompt()  получить 2 целых числа. Привести их к целочисленному типу.
+// // Первое число - это число которое будут возводить в степень. Второе число - это число которое является степенью.
+// // При помощи Math.pow возвести первое число в степень второго числа.
 //
 // let num1 = prompt('set first number');
 // let num2 = prompt('set second number');
@@ -236,7 +255,9 @@
 //
 // console.log(result);
 
-// //12
+// // 12
+// // При помощи оператора опредеоения типа typeof определить типы следующих переменных и вывести их
+// // в консоль let a = 100; let b = '100'; let c = true; let d = undefined;
 //
 // let a = 100;
 // let b = '100';
@@ -253,7 +274,9 @@
 // console.log(typec);
 // console.log(typed);
 
-// //13
+// // 13
+// // Поставьте соответствующий оператор в выражениях что бы получился соответсвующий результат.
+// // В одинаковых выражениях в задании не использовать два одинаковых оператора.
 //
 // console.log(5 < 6); // -> true
 // console.log(5 > 6); // -> false
@@ -268,6 +291,7 @@
 // console.log(123 == '123'); // -> true
 
 // //14
+// // Посмотрев на следюующие выражения, скажите, каков будет вывод в консоль
 //
 // console.log(132 > 100 && 45 < 12 ); // F
 // console.log(34 > 33 && 23 < 90 ); // T
