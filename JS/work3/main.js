@@ -7,14 +7,14 @@
 
 const content = document.getElementById('content');
 
-// console.log(content);
+let textContent = content.textContent;
 
 // 1_b
 // Отримує текст з блоку з id "rules".
 
 const rules = document.getElementById('rules');
 
-// console.log(rules);
+let textRules = rules.textContent;
 
 // 1_c
 // Замініть текст параграфа з id 'content' на будь-який інший.
