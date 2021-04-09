@@ -25,8 +25,8 @@ function funcRandomArr(arr) {
 // 3
 // Створити функцію яка приймає три числа та виводить найменьше. (Без Math.min!).
 
-function funcMinNum(num1) {
-    let minNum = num1;
+function funcMinNum() {
+    let minNum = arguments[0];
     for (let i = 0; i < arguments.length; i++) {
         if (arguments[i] < minNum) {
             minNum = arguments[i];
@@ -41,7 +41,7 @@ function funcMinNum(num1) {
 // Створити функцію яка приймає три числа та виводить найбільше. (Без Math.max!).
 
 function funcMaxNum() {
-    let maxNum = 0;
+    let maxNum = arguments[0];
     for (let i = 0; i < arguments.length; i++) {
         if (arguments[i] > maxNum) {
             maxNum = arguments[i];
