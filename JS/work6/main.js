@@ -18,7 +18,7 @@ let numsFilter1 = numbers.filter((number) => number % 3 === 0);
 
 let numsFilter2 = numbers.filter((number) => number > 10);
 
-//  e) Проітерувати його forEach та вивести кожеш елмент за допомогою document.write.
+//  e) Проітерувати його forEach та вивести кожен елмент за допомогою document.write.
 
 numbers.forEach((number) => document.write(number + '<br>'));
 
@@ -78,7 +78,7 @@ let usersSortAge1 = users.sort((a, b) => a.age - b.age);
 let usersSortAge2 = users.sort((a, b) => b.age - a.age);
 */
 
-// b) Відсортувати його за кількістю знаків в імені  (зростання , а потім окремо спадання).
+// b) Відсортувати його за кількістю знаків в імені  (зростання, а потім окремо спадання).
 
 /*
 let usersSortLetter1 = users.sort((a, b) => a.name.length - b.name.length);

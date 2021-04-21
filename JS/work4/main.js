@@ -15,7 +15,6 @@ let arr = [142, 433, 21, 123, 432, 2331, 312, 213];
 function funcRandomArr(arr) {
     for (let i = 0; i < arr.length; i++) {
         arr[i] = Math.random();
-
     }
     funcShowArr(arr);
 }
