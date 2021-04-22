@@ -9,7 +9,7 @@
 
 class main {
     constructor(RAM, CP, name) {
-        this.ram = RAM;
+        this.RAM = RAM;
         this.CP = CP;
         this.name = name;
     }
@@ -81,7 +81,8 @@ class mainPC extends main {
     }
 
     onGame() {
-        document.write(`You are playing ${this.game} with ${this.FPS} FSP`);
+        this.fpsLog = `You are playing ${this.game} with ${this.FPS} FPS`;
+        console.log(this.fpsLog);
     }
 
     upgradeCP(value) {
@@ -99,9 +100,11 @@ class mainPC extends main {
 
 let mainComputer = new mainPC(16, 1000, 'gameComputer', 'CS');
 
-mainComputer.upgradeCP(11);
-
-console.log(mainComputer);
+// mainComputer.upgradeCP(11);
+//
+// mainComputer.upgradeRAM();
+//
+// console.log(mainComputer);
 
 // 5
 // Від базового ПК необхідно зробити ігровий ПК.
@@ -114,6 +117,20 @@ class gamePC extends mainPC {
     constructor(RAM, CP, name, game) {
         super(RAM, CP, name, game);
         this.FPS *= 2
+    }
 
+    onGame() {
+        super.onGame();
+        this.CP *= 0.99;
+        if (this.CP < 500 && this.RAM < 8) {
+            this.fpsLog = undefined;
+            alert('На цьому відрі ігри не запускаються');
+        }
     }
 }
+
+let gameComputer = new gamePC(6, 400, 'UltraGameComputer3000', 'Skyrim');
+
+gameComputer.onGame();
+
+console.log(gameComputer);
