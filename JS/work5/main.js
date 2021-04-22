@@ -94,7 +94,7 @@ class mainPC extends main {
     }
 
     upgradeRAM() {
-        this.RAM *= 2;
+        this.RAM = this.RAM * 2;
     }
 }
 
@@ -109,28 +109,45 @@ let mainComputer = new mainPC(16, 1000, 'gameComputer', 'CS');
 // 5
 // Від базового ПК необхідно зробити ігровий ПК.
 // Кількість ФПС має бути рівно в 2 рази більший ніж в звичайного ПК.
-// При запуску однієї гри потужніть процесора має падати на 0.1%.
+// При запуску однієї гри потужніть процесора має падати на 10%.
 // Якшо потужність процесора менша ніж 500. І оперативка менша за 8 потрібно видати помилку, (алерт, або консоль)
 // що на цьому відрі ігри не запускаються.
 
 class gamePC extends mainPC {
-    constructor(RAM, CP, name, game) {
-        super(RAM, CP, name, game);
+    constructor(RAM, CP, name, game, FPS) {
+        super(RAM, CP, name, game, FPS);
         this.FPS *= 2
     }
 
     onGame() {
-        super.onGame();
-        this.CP *= 0.99;
-        if (this.CP < 500 && this.RAM < 8) {
-            this.fpsLog = undefined;
-            alert('На цьому відрі ігри не запускаються');
+        this.CP = this.CP - (this.CP / 100 * 10)
+        if (this.CP < 500 || this.RAM < 8) {
+            this.game = null
+            this.FPS = null
+            console.log('На цьому відрі ігри не запускаються');
         }
     }
 }
 
-let gameComputer = new gamePC(6, 400, 'UltraGameComputer3000', 'Skyrim');
+let gameComputer = new gamePC(16, 1000, 'gameComputer', 'CS');
 
+gameComputer.upgradeCP(11);
+gameComputer.upgradeRAM();
+gameComputer.onGame();
+gameComputer.onGame();
+gameComputer.onGame();
+gameComputer.onGame();
+gameComputer.onGame();
+gameComputer.onGame();
+gameComputer.onGame();
+gameComputer.onGame();
 gameComputer.onGame();
 
 console.log(gameComputer);
+
+let gameComputer2 = new gamePC(6, 400, 'UltraGameComputer3000', 'Skyrim');
+
+gameComputer2.onGame();
+
+console.log(gameComputer2);
+
