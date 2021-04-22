@@ -81,7 +81,8 @@ class mainPC extends main {
     }
 
     onGame() {
-        document.write(`You are playing ${this.game} with ${this.FPS} FSP`);
+        this.fpsLog = `You are playing ${this.game} with ${this.FPS} FPS`;
+        console.log(this.fpsLog);
     }
 
     upgradeCP(value) {
@@ -100,6 +101,7 @@ class mainPC extends main {
 let mainComputer = new mainPC(16, 1000, 'gameComputer', 'CS');
 
 // mainComputer.upgradeCP(11);
+//
 // mainComputer.upgradeRAM();
 //
 // console.log(mainComputer);
@@ -116,6 +118,7 @@ class gamePC extends mainPC {
         super(RAM, CP, name, game, FPS);
         this.FPS *= 2
     }
+
     onGame() {
         this.CP = this.CP - (this.CP / 100 * 10)
         if (this.CP < 500 || this.RAM < 8) {
@@ -127,7 +130,6 @@ class gamePC extends mainPC {
 }
 
 let gameComputer = new gamePC(16, 1000, 'gameComputer', 'CS');
-
 
 gameComputer.upgradeCP(11);
 gameComputer.upgradeRAM();
@@ -141,5 +143,11 @@ gameComputer.onGame();
 gameComputer.onGame();
 gameComputer.onGame();
 
-
 console.log(gameComputer);
+
+let gameComputer2 = new gamePC(6, 400, 'UltraGameComputer3000', 'Skyrim');
+
+gameComputer2.onGame();
+
+console.log(gameComputer2);
+
