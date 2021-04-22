@@ -10,7 +10,7 @@
 class main {
     constructor(RAM, CP, name) {
         this.ram = RAM;
-        this.cp = CP;
+        this.CP = CP;
         this.name = name;
     }
 
@@ -78,22 +78,28 @@ class mainPC extends main {
         super(RAM, CP, name);
         this.game = game;
         this.FPS = CP / RAM;
-        this.CP *= 2;
     }
 
     onGame() {
         document.write(`You are playing ${this.game} with ${this.FPS} FSP`);
     }
 
-    upgradePC() {
-        this.CP *= 1.1;
+    upgradeCP(value) {
+        if (value > 0 && value <= 10) {
+            this.CP = (100 + value) / 100 * this.CP;
+        } else {
+            console.log(`збільшити потужність на ${value}% неможливо`)
+        }
+    }
+
+    upgradeRAM() {
         this.RAM *= 2;
     }
 }
 
-let mainComputer = new mainPC(16, '1000', 'gameComputer', 'CS');
+let mainComputer = new mainPC(16, 1000, 'gameComputer', 'CS');
 
-mainComputer.upgradePC();
+mainComputer.upgradeCP(11);
 
 console.log(mainComputer);
 
