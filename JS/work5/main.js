@@ -7,7 +7,7 @@
 // Назва.
 // В кожного компютера має бути метод включання.
 
-class main {
+class Main {
     constructor(RAM, CP, name) {
         this.RAM = RAM;
         this.CP = CP;
@@ -19,14 +19,14 @@ class main {
     }
 }
 
-// let myPc = new computer(16, 1000, 'myPC');
+// let myPc = new Main(16, 1000, 'myPC');
 
 // 2
 // Від базового компютрера треба реалізувати ноутбук.
 // Він має нову властивість дюймаж монітора.
 // У нього зявляється нова змінна роботи батареї. Ця змінна визначається як потужність / (дюйми * оперативку).
 
-class notebook extends main {
+class Notebook extends Main {
     constructor(RAM, CP, name, monitor) {
         super(RAM, CP, name);
         this.monitor = monitor;
@@ -34,14 +34,14 @@ class notebook extends main {
     }
 }
 
-let myNotebook = new notebook(8, 600, 'myNote', 17);
+let myNotebook = new Notebook(8, 600, 'myNote', 17);
 
 // 3
 // Від ноутбука потрібно зробити ультрабук.
 // Він має нову змінну ваги.
 // При включенні ультрабуку має видаватися помилка, якшо вага більша за 2кг та батарея тримаж менше ніж 4 години.
 
-class ultrabook extends notebook {
+class Ultrabook extends Notebook {
     constructor(RAM, CP, name, monitor, kg) {
         super(RAM, CP, name, monitor);
         this.kg = kg;
@@ -56,7 +56,7 @@ class ultrabook extends notebook {
     }
 }
 
-let myUltrabook = new ultrabook(8, 400, 'myUltra', 15, 5);
+let myUltrabook = new Ultrabook(8, 400, 'myUltra', 15, 5);
 
 // myUltrabook.turnOn();
 //
@@ -73,7 +73,7 @@ let myUltrabook = new ultrabook(8, 400, 'myUltra', 15, 5);
 // Оперативку можна збільшити лише в 2 рази. Зменшувати її не можна.
 // Для зміни характеритик мають бути свої методи. Міняти змінну "в лоб" заборонено.
 
-class mainPC extends main {
+class MainPC extends Main {
     constructor(RAM, CP, name, game) {
         super(RAM, CP, name);
         this.game = game;
@@ -81,8 +81,7 @@ class mainPC extends main {
     }
 
     onGame() {
-        this.fpsLog = `You are playing ${this.game} with ${this.FPS} FPS`;
-        console.log(this.fpsLog);
+        console.log(`You are playing ${this.game} with ${this.FPS} FPS`);
     }
 
     upgradeCP(value) {
@@ -98,7 +97,7 @@ class mainPC extends main {
     }
 }
 
-let mainComputer = new mainPC(16, 1000, 'gameComputer', 'CS');
+let mainComputer = new MainPC(16, 1000, 'gameComputer', 'CS');
 
 // mainComputer.upgradeCP(11);
 //
@@ -113,10 +112,10 @@ let mainComputer = new mainPC(16, 1000, 'gameComputer', 'CS');
 // Якшо потужність процесора менша ніж 500. І оперативка менша за 8 потрібно видати помилку, (алерт, або консоль)
 // що на цьому відрі ігри не запускаються.
 
-class gamePC extends mainPC {
+class GamePC extends MainPC {
     constructor(RAM, CP, name, game, FPS) {
         super(RAM, CP, name, game, FPS);
-        this.FPS *= 2
+        this.FPS *= 2;
     }
 
     onGame() {
@@ -129,7 +128,7 @@ class gamePC extends mainPC {
     }
 }
 
-let gameComputer = new gamePC(16, 1000, 'gameComputer', 'CS');
+let gameComputer = new GamePC(16, 1000, 'gameComputer', 'CS');
 
 gameComputer.upgradeCP(11);
 gameComputer.upgradeRAM();
@@ -145,9 +144,4 @@ gameComputer.onGame();
 
 console.log(gameComputer);
 
-let gameComputer2 = new gamePC(6, 400, 'UltraGameComputer3000', 'Skyrim');
-
-gameComputer2.onGame();
-
-console.log(gameComputer2);
 
