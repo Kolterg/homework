@@ -7,12 +7,23 @@
 <body>
 <textarea id="text1" name="text1"></textarea>
 
-<form id="form2">
-    <input id="text2Input" name="text2Input">
+<form id="form2" style="margin: 10px 0; display: flex">
+    <input id="text2Input" name="text2Input" style="margin-right: 5px">
     <textarea id="text2Area"></textarea>
     <input id="check2" type="checkbox">
     <input name="radio" type="radio">
     <input name="radio" type="radio">
+</form>
+
+<form id="form3" style="display: flex; flex-direction: column">
+    <div>
+        <button id="btn3L" style="visibility: hidden">←</button>
+        <button id="btn3R" style="visibility: hidden">→</button>
+    </div>
+    <div style="display: flex; margin-top: 5px">
+        <textarea id="text3Area" style="margin-right: 5px"></textarea>
+        <button id="btn3">Сохранить</button>
+    </div>
 </form>
 <script src="main.js"></script>
 </body>
